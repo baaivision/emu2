@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Generative Multimodal Models are In-Context Learners">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generative Multimodal Models are In-Context Learners</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Generative Multimodal Models are In-Context Learners</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/Quan-Sun">Quan Sun</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=5Ydha2EAAAAJ&hl=en">Yufeng Cui</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://zhangxiaosong18.github.io">Xiaosong Zhang</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=VsJ39HMAAAAJ">Fan Zhang</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yqy2001.github.io">Qiying Yu</a><sup>2,1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://greatlog.github.io">Zhengxiong Luo</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Yueze Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://raoyongming.github.io">Yongming Rao</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://air.tsinghua.edu.cn/en/info/1046/1194.htm">Jingjing Liu</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=knvEK4AAAAAJ&hl=en">Tiejun Huang</a><sup>1,3</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.xloong.wang/">Xinlong Wang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Beijing Academy of Artificial Intelligence</span>
+            <span class="author-block"><sup>2</sup>Tsinghua University</span>
+            <span class="author-block"><sup>3</sup>Peking University</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+          
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/baaivision/Emu"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/BAAI/Emu2"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Demo</span>
+                  </a>
+              </span>
+
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/BAAI/Emu2"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>🤗   HuggingFace</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The human ability to easily solve multimodal tasks in context (i.e., with only a few demonstrations or simple instructions), is what current multimodal systems have largely struggled to imitate. 
+            In this work, we demonstrate that the task-agnostic in-context learning capabilities of large multimodal models can be significantly enhanced by effective scaling-up. 
+            We introduce <b style="color: rgb(100,149,237);">Emu2</b>, a generative multimodal model with 37 billion parameters, trained on large-scale multimodal sequences with a unified autoregressive objective.
+            <b style="color: rgb(100,149,237);">Emu2</b> exhibits strong multimodal in-context learning abilities, even emerging to solve tasks that require on-the-fly reasoning, such as visual prompting and object-grounded generation.
+            The model sets a new record on multiple multimodal understanding tasks in few-shot settings.
+            When instruction-tuned to follow specific instructions, <b style="color: rgb(100,149,237);">Emu2</b> further achieves new state-of-the-art on challenging tasks such as question answering benchmarks for large multimodal models and open-ended subject-driven generation.
+            These achievements demonstrate that <b style="color: rgb(100,149,237);">Emu2</b> can serve as a base model and general-purpose interface for a wide range of multimodal tasks. 
+            Code and models are publicly available to facilitate future research.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/nz4BJ7MKtKo?si=j-aVv3ECpCG4FQwV" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+    
+
+  </div>
+
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column is-full-width">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">A strong multimodal few-shot learner</h2>
+            <div class="columns is-centered">
+              <img src="./static/images/comparison_fewshot.png" class="interpolation-image" alt="comparison_fewshot." width="80%" heght="80%" />
+            </div>
+
+            <h2 class="title is-3">An impressive multimodal generalist</h2>
+
+            <div class="columns is-centered">
+                <img src="./static/images/radar.png" class="interpolation-image" alt="Radar." height="50%" width="50%" />
+            </div>
+          <br>
+
+            <h2 class="title is-3">A skilled painter</h2>
+
+            <div class="columns is-centered">
+              <img src="./static/images/gen_compare_metrics.png" class="interpolation-image" alt="gen_metrics." height="30%" width="50%" style="position:relative;left:50px;"/>
+            </div>
+
+            <div class="content is-centered">
+              <p>
+                Zero-shot subject-driven generation
+              </p>
+            </div>
+            
+
+          </div>
+        </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column is-full-width">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+
+        <!-- cases. -->
+        <h2 class="title is-3">Multimodal in-Context learning</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/multi-modal-incontext-learning.png" class="interpolation-image" alt="multi-modal-incontext-learning."/>
+          </div>
+        </div>
+
+        <h2 class="title is-3">Strong multimodal understanding</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/hexogon.png" class="interpolation-image" alt="hexogon." width="80%" height="80%"/>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/guid_robot.png" class="interpolation-image" alt="guide robot." width="80%" height="80%"/>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/damage_car.png" class="interpolation-image" alt="damage car." width="80%" height="80%"/>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/sample_AB.png" class="interpolation-image" alt="sample A and B." width="80%" height="80%"/>
+          </div>
+        </div>
+
+        <h2 class="title is-3">Generate image from any prompt sequence</h3>
+
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/bear.gif" class="interpolation-image" alt="generate_from_any_prompt_sequence1." width="80%" height="80%" />
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/dog_emu.gif" class="interpolation-image" alt="generate_from_any_prompt_sequence2." width="80%" height="80%" />
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/emu-g-case.jpg" class="interpolation-image" alt="generate_from_any_prompt_sequence3." width="80%" height="80%" />
+          </div>
+        </div>
+
+        <h2 class="title is-3">Generate video from any prompt sequence</h3>
+
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/video.gif" class="interpolation-image" alt="video_generation." />
+          </div>
+        </div>
+
+        <div class="video-container">
+          <video width="200" height="200" autoplay controls muted loop playsinline>
+            <source src="./static/videos/blue_bird.mp4"
+              type="video/mp4">
+          </video>
+      
+          <video width="200" height="200" autoplay controls muted loop playsinline>
+            <source src="./static/videos/floating.mp4"
+              type="video/mp4">
+          </video>
+
+          <video width="200" height="200" autoplay controls muted loop playsinline>
+            <source src="./static/videos/emu.mp4"
+              type="video/mp4">
+          </video>
+
+          <video width="200" height="200" autoplay controls muted loop playsinline>
+            <source src="./static/videos/2dogs.mp4"
+              type="video/mp4">
+          </video>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+        <!-- Paper method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b style="color: rgb(100,149,237);">Emu2</b> learns with a predict-the-next-element objective in multimodality. Each image in the
+              multimodal sequence is tokenized into embeddings via a visual encoder, and then interleaved with text tokens for autoregressive modeling.
+              The regressed visual embeddings will be decoded into an image or a video by a visual decoder. Compared to Emu1, Emu2 embraces a simpler framework, 
+              better visual decoder, and scales up to 37 billion parameters.
+            </p>
+            <img src="./static/images/emu2_method.png" class="interpolation-image" alt="emu2_method."/>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper method. -->
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Emu,
+      title={Generative Pretraining in Multimodality},
+      author={Sun, Quan and Yu, Qiying and Cui, Yufeng and Zhang, Fan and Zhang, Xiaosong and Wang, Yueze and Gao, Hongcheng and Liu, Jingjing and Huang, Tiejun and Wang, Xinlong},
+      publisher={arXiv preprint arXiv:2307.05222},
+      year={2023},
+  }</code></pre>
+  </div>
+</section>
+
+</body>
+
+<footer>
+  <a href="https://github.com/nerfies/nerfies.github.io">template</a>
+</footer>
+
+
+</html>
